@@ -1,0 +1,390 @@
+/* Variables */
+:root{
+    --main-color: #ff0090;
+    --body-color: #5d0656;
+    --container-color: #800080;
+    --heading-color: #f4f4f4;
+    --box-color: #280035;
+    --bg-color: #fff;
+}
+/* -------------------------------------------------------- */
+/* Fuente */
+*{
+    font-family: 'Poppins', sans-serif;
+}
+/* -------------------------------------------------------- */
+/* General */
+body{
+    color: var(--bg-color);
+    background: var(--body-color);
+}
+img{
+    width: 100%;
+}
+section{
+    padding: 3rem 0 2rem;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/* -------------------------------------------------------- */
+.contenedor{
+    max-width: 960px;
+    margin: auto;
+    width: 100%;
+}
+/* -------------------------------------------------------- */
+/* Header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: var(--body-color);
+    box-shadow: 0 0 16px 1px rgb(14 52 54 / 15%);
+}
+/* -------------------------------------------------------- */
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.logo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+.nav-link{
+    font-size: 0.94rem;
+    padding: 4px 8px;
+    border-radius: 0.2rem;
+    color: var(--bg-color);
+}
+.nav-link:hover{
+    color: var(--main-color);
+    background-color: var(--container-color);
+    transition: 0.3s all linear;
+}
+/* -------------------------------------------------------- */
+/* Menu Icon */
+.menu-icon{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+.menu-icon div{
+    display: block;
+    background: var(--bg-color);
+    height: 2px;
+    width: 24px;
+    transition: 0.3ms;
+}
+.move .line1{
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+.move .line2{
+    opacity: 0;
+}
+.move .line3{
+    transform: rotate(-45deg) translate(-5px,-5px);
+}
+/* -------------------------------------------------------- */
+/* Inicio */
+.inicio{
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+}
+.inicio-content{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.inicio-img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #98a7fc;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.inicio-img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+}
+.inicio-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.inicio-texto h3{
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--main-color);
+}
+.inicio-texto h3::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    left: -15px;
+    width: 20px;
+    height: 2px;
+    background: var(--main-color);
+}
+.inicio-texto h3::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    right: -35px;
+    width: 20px;
+    height: 2px;
+    background: var(--main-color);
+}
+.inicio-texto h2{
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+}
+.inicio-texto p{
+    font-size: 0.938rem;
+    margin-bottom: 1.5rem;
+}
+.inicio-texto .color{
+    color: var(--main-color);
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.social .bx{
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--bg-color);
+    background: var(--container-color);
+}
+.social .bx:hover{
+    background: var(--main-color);
+    transition: 0.3s all linear;
+}
+.heading{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.nosotros-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+}
+.nosotros-data span{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+.nosotros-data h2{
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 700;
+}
+.btn{
+    font-size: 0.87rem;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: var(--bg-color);
+    background: var(--main-color);
+    padding: 12px 16px;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+}
+.btn .bx{
+    font-size: 1.2rem;
+}
+.btn:hover{
+    background: #546eff;
+    transition: 0.3s all linear;
+}
+.nosotros-texto p{
+    font-size: 0.938rem;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+/* -------------------------------------------------------- */
+/* categorias */
+.categorias-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.categorias-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background: var(--container-color);
+    border-radius: 0.4rem;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165,1);
+}
+.categorias-box:hover{
+    transform: scale(1.05);
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165,1);
+}
+.categorias-box .bx{
+    font-size: 1.4rem;
+    color: var(--main-color);
+    padding: 10px;
+    border-radius: 5rem;
+    border: 2px dashed var(--bg-color);
+}
+.categorias-box h2{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: var(--main-color);
+}
+.categorias-box p{
+    font-size: 0.9rem;
+}
+/* -------------------------------------------------------- */
+/* Productos */
+.productos-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.productos-box{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.productos-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.productos-overlay{
+    position: absolute;
+    top: -100;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: hsl(234,45%,16%,0.7);
+}
+.productos-overlay h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.productos-overlay .bx{
+    font-size: 24px;
+    padding: 10px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 4px;
+}
+.productos-overlay.bx:hover{
+    background: #546eff;
+    transition: 0.3s all linear;
+}
+.productos-box:hover .productos-overlay{
+    top: 0;
+    transition: 0.5s all ease;
+}
+/* -------------------------------------------------------- */
+/* Projectos */
+.projectos-content{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    justify-content: center;
+    gap: 1.5rem;
+}
+.projecto-box{
+    padding: 20px 10px;
+    background: var(--box-color);
+    border-radius: 0.4rem;
+    text-align: center;
+}
+.projecto-box h2{
+    font-size: 1.2rem;
+}
+.projecto-box span{
+    font-size: 0.845rem;
+}
+/* -------------------------------------------------------- */
+/* Contacto Form */
+.contacto-form{
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    row-gap: 1rem;
+}
+.contacto-form input,
+.contacto-form textarea{
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    padding: 15px;
+    color: var(--bg-color);
+    background: var(--box-color);
+    border-radius: 0.4rem;
+}
+.contacto-form .send-btn{
+    width: 120px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 12px;
+    background: var(--main-color);
+    cursor: pointer;
+}
+.contacto-form .send-btn:hover{
+    background: #546eff;
+    transition: 0.3s all linear;
+}
